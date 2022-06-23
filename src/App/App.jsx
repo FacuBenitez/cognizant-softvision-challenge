@@ -7,14 +7,12 @@ import "./_reset.scss";
 import styles from "./App.module.scss";
 import Column from "./components/Column/Column";
 
-import {BiMoon, BiSun} from "react-icons/bi";
-
 const steps = ["Entrevista inicial", "Entrevista técnica", "Oferta", "Asignacion", "Rechazo"];
 
 function App() {
   const [status, setStatus] = useState("init");
   const [candidates, setCandidates] = useState([]);
-  const [theme, setTheme] = useState(localStorage.getItem("THEME") || "light");
+  
   const data = useMemo(() => {
     return candidates.reduce((acc, candidate) => {
       const step = candidate.step;
@@ -35,9 +33,6 @@ function App() {
       .finally(setStatus("resolved"));
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem("THEME", theme);
-  }, [theme]);
 
   useEffect(() => {
     api.candidates.save(candidates);
@@ -63,14 +58,9 @@ function App() {
   };
 
   return (
-    <div className={`${theme} ${styles.theme}`}>
+    <div className={`${styles.background}`}>
       <div className={`background-primary ${styles.App}`}>
-        <button
-          className={`button background-tertiary ${styles.btn}`}
-          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-        >
-          {theme === "light" ? <BiSun /> : <BiMoon />}
-        </button>
+ 
         <main className={`${styles.columnsContainer} `}>
           {steps.map((step, candidateStep) => {
             return (

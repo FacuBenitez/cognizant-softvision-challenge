@@ -5,7 +5,7 @@ import styles from "./CandidateInput.module.scss";
 
 const CandidateInput = ({setOpen, open, handleSubmit, form, handleChange}) => {
   return (
-    <form className={`background-primary ${styles.form}`} onSubmit={handleSubmit}>
+    <form className={`${styles.form}`} onSubmit={handleSubmit}>
       <input
         required
         className={styles.inputName}
@@ -26,7 +26,7 @@ const CandidateInput = ({setOpen, open, handleSubmit, form, handleChange}) => {
       <div className={styles.submitContainer}>
         <input className={styles.btnSubmit} type="submit" value="Agregar Candidato" />
         <button className={styles.btnClose} onClick={() => setOpen(!open)}>
-          <FiX />
+          <FiX  size={'14px'}/>
         </button>
       </div>
     </form>

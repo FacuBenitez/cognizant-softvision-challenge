@@ -4,7 +4,7 @@
 
 .Card{
     min-height: 80px;
-    max-height: 350px;
+    max-height: 340px;
     
     justify-content: space-between;
 
@@ -14,7 +14,7 @@
     border-radius: 5px;
 
     display: flex;
-    
+    background-color:$yellowLight ;
     flex-direction: column;
     overflow: hidden;
     
@@ -75,13 +75,12 @@
 
     .deleteContainer{
         align-self: baseline;
+        background-color: $yellowLight;
         width: 100%;
         filter: saturate(60%);
-
         display: flex;
         justify-content: right;
         border-radius:  0 0 5px 5px ;
-
         position: sticky;
         bottom: 0;
         

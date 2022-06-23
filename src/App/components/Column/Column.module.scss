@@ -1,3 +1,5 @@
+@use '/src/App/abstract/colors' as *;
+
 .candidatesContainer{
     display: flex;
     flex-direction: column;
@@ -24,16 +26,12 @@
     flex-direction: column;
     flex: 1;
     gap: 0.2rem;
-
     border-radius: 5px;
-
     text-align: start;
-
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
     min-width: 17vw;
-max-width: 350px;
-flex-grow: 0;
+    max-width: 350px;
+    flex-grow: 0;
 
 
     
@@ -44,12 +42,15 @@ flex-grow: 0;
 
 
     .button{
+        border: none;
         margin: 0 .5em;
         padding: 0.3rem;
         cursor: pointer;
         border-radius: 5px;
-
-        
+        background-color: $orange;
+        &:hover{
+            background-color: $orangeDark;
+        }
     }
 
     .title{

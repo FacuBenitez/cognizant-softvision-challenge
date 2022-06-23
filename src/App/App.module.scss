@@ -1,3 +1,4 @@
+
 @mixin flexCenter {
   display: flex;
   align-items: center;
@@ -37,20 +38,18 @@
   }
 }
 
-.theme, .App{
+
+.App{
   width: 100vw;
   height: 100vh;
-
   @include flexCenter();
 
   .columnsContainer{
     height: 80vh;
     width: 90vw;
-
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
-
     z-index: 2;
 
   }

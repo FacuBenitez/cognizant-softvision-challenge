@@ -6,7 +6,7 @@
     margin: 0 .5em;
     
     border-radius: 5px;
-
+    background-color: #DFF6FF;
     display: flex;
     flex-direction: column;
 
@@ -19,14 +19,16 @@
         margin-top: .3rem;
 
         .btnSubmit{
-            background-color: $green; 
+            background-color: $minty;
+            font-weight: 600;
             &:hover{
                 filter: opacity(80%);
             }  
         }
 
         .btnClose{
-            background-color: $red;
+            background-color: #06283D;
+            color: $light-800;
             &:hover{
                 filter: opacity(80%);
             }
@@ -43,4 +45,25 @@
     padding: 0.5em 1em;
     border-radius: 5px;
     font-size: 12px;
+}
+
+@media screen and (max-width: 888px){
+    .form{
+        min-width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+    .submitContainer{
+     
+        width: 100%;
+        flex-direction: column;
+        .btnClose{
+            margin-top: .3rem;
+            width: 100%;
+        }
+        .btnSubmit{
+            width: 100%;
+        }
+    }
+    
 }

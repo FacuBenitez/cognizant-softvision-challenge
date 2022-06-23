@@ -1,6 +1,6 @@
 import React from "react";
 import {BiChevronRight, BiChevronLeft} from "react-icons/bi";
-import {FiEdit, FiTrash} from "react-icons/fi";
+import { FiTrash} from "react-icons/fi";
 
 import styles from "./CandidateList.module.scss";
 
@@ -35,7 +35,7 @@ const CandidateList = ({data, candidateStep, updateCandidateStep, handleDelete})
                   )}
                 </div>
               </div>
-              <div className={`${styles.deleteContainer} background-tertiary `}>
+              <div className={`${styles.deleteContainer}`}>
                 <button className={styles.btn} onClick={() => handleDelete(d.id)}>
                   <FiTrash />
                 </button>

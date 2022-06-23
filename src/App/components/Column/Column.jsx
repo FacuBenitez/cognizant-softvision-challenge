@@ -57,6 +57,7 @@ const Column = ({title, data, candidateStep, updateCandidateStep, setCandidates,
               onClick={() => setOpen(!open)}
             >
               <BiPlus className="text-title" />
+            
             </button>
           ))}
 
