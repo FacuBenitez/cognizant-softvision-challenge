@@ -1,0 +1,103 @@
+@use '../../abstract/_colors.scss' as *;
+
+
+
+.Card{
+    min-height: 80px;
+    max-height: 350px;
+    
+    justify-content: space-between;
+
+    margin: 0 .5em;
+
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-radius: 5px;
+
+    display: flex;
+    
+    flex-direction: column;
+    overflow: hidden;
+    
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    
+
+    .textContainer{
+        padding: 0.8rem;
+        max-width: 100%;
+    
+
+        display: flex;
+        justify-content: space-between;
+        
+
+        
+
+        .text{
+            overflow-wrap: break-word;
+            max-width: 85%;
+    
+
+        }
+
+        
+        
+        .buttons{
+        display: flex;
+        flex-direction: column;
+
+        
+
+        .btn{
+            color: $light-800;
+            background-color: $dark-700;
+
+            &:hover{
+                background-color: $dark-500;
+            }
+        }
+
+        
+
+    }}
+
+    .btn{
+        
+        border: none;
+        border-radius: 5px;
+        
+        margin: .18em;
+        cursor: pointer;
+
+        
+    }
+
+    .deleteContainer{
+        align-self: baseline;
+        width: 100%;
+        filter: saturate(60%);
+
+        display: flex;
+        justify-content: right;
+        border-radius:  0 0 5px 5px ;
+
+        position: sticky;
+        bottom: 0;
+        
+
+        .btn{
+            padding: .2rem .3rem;
+
+            background-color: transparent;
+
+            &:hover{
+                color: $red;
+            }
+            
+
+        }
+
+        
+    }
+}

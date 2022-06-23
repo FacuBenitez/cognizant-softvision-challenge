@@ -1,0 +1,46 @@
+@use '../../abstract/colors' as *;
+
+.form{
+    min-height: 70px;
+    padding: 0.8rem;
+    margin: 0 .5em;
+    
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: .3rem;
+    flex-shrink: 0;
+
+    .submitContainer{
+        display: flex;
+        justify-content: space-between;
+        margin-top: .3rem;
+
+        .btnSubmit{
+            background-color: $green; 
+            &:hover{
+                filter: opacity(80%);
+            }  
+        }
+
+        .btnClose{
+            background-color: $red;
+            &:hover{
+                filter: opacity(80%);
+            }
+        }
+
+        
+    
+    }
+}
+
+.inputName, .inputComment, .btnSubmit, .btnClose{
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: 12px;
+}
